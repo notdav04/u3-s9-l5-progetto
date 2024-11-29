@@ -96,9 +96,9 @@ class SliderGallery extends Component {
                       src={element.Poster}
                       alt="movie picture"
                       style={{
-                        height: "400px",
-                        width: "auto",
-                        maxWidth: "100%",
+                        height: "180px",
+                        width: "100%",
+
                         objectFit: "cover"
                       }}
                     />
