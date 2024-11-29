@@ -1,7 +1,7 @@
 import { Component } from "react";
 import UpperBanner from "./UpperBanner";
 import SliderGallery from "./SliderGallery";
-import Grid from "./Grid";
+// import Grid from "./Grid";
 class MainSection extends Component {
   render() {
     return (
