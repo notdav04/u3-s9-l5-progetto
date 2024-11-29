@@ -4,7 +4,7 @@ class UpperBanner extends Component {
   render() {
     return (
       <>
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-between py-4">
           <div className="d-flex">
             <h2 className="mb-4" style={{ color: "#f5f5f1" }}>
               TV Shows

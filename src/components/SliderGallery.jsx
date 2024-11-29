@@ -64,47 +64,50 @@ class SliderGallery extends Component {
   }
   render() {
     return (
-      <div
-        className="slider-container"
-        style={{ maxWidth: "95%", marginInline: "auto" }}
-      >
-        {this.state.error != null && <Alert>{this.state.error}</Alert>}
-        {!this.state.controlLoading && (
-          <Spinner
-            animation="border"
-            role="status"
-            style={{ color: "#f5f5f1", width: "100px", height: "100px" }}
-          >
-            <span className="visually-hidden ">Loading...</span>
-          </Spinner>
-        )}
-        {this.state.responseList.length > 0 && (
-          <Slider {...this.state.settings}>
-            {this.state.responseList.map((element) => {
-              return (
-                <Col
-                  lg={2}
-                  md={4}
-                  sm={6}
-                  key={element.imdbID}
-                  className=" mb-2 text-center px-1"
-                >
-                  <img
-                    className="img-fluid"
-                    src={element.Poster}
-                    alt="movie picture"
-                    style={{
-                      height: "400px",
-                      width: "auto",
-                      maxWidth: "100%",
-                      objectFit: "cover"
-                    }}
-                  />
-                </Col>
-              );
-            })}
-          </Slider>
-        )}
+      <div>
+        <h4 style={{ color: "#f5f5f1" }}>{this.props.titoloSezione}</h4>
+        <div
+          className="slider-container"
+          style={{ maxWidth: "95%", marginInline: "auto" }}
+        >
+          {this.state.error != null && <Alert>{this.state.error}</Alert>}
+          {!this.state.controlLoading && (
+            <Spinner
+              animation="border"
+              role="status"
+              style={{ color: "#f5f5f1", width: "100px", height: "100px" }}
+            >
+              <span className="visually-hidden ">Loading...</span>
+            </Spinner>
+          )}
+          {this.state.responseList.length > 0 && (
+            <Slider {...this.state.settings}>
+              {this.state.responseList.map((element) => {
+                return (
+                  <Col
+                    lg={2}
+                    md={4}
+                    sm={6}
+                    key={element.imdbID}
+                    className=" mb-2 text-center px-1"
+                  >
+                    <img
+                      className="img-fluid"
+                      src={element.Poster}
+                      alt="movie picture"
+                      style={{
+                        height: "400px",
+                        width: "auto",
+                        maxWidth: "100%",
+                        objectFit: "cover"
+                      }}
+                    />
+                  </Col>
+                );
+              })}
+            </Slider>
+          )}
+        </div>
       </div>
     );
   }

@@ -7,15 +7,15 @@ class MainSection extends Component {
     return (
       <div className="container-fluid px-4">
         <UpperBanner />
-        <h4 style={{ color: "#f5f5f1" }}>Trending Now</h4>
+
         {/* <Grid search="harry" /> */}
-        <SliderGallery search="harry" />
-        <h4 style={{ color: "#f5f5f1" }}>Watch It Again</h4>
+        <SliderGallery search="harry potter" titoloSezione="Harry Potter" />
+
         {/* <Grid search="avatar" /> */}
-        <SliderGallery search="avatar" />
-        <h4 style={{ color: "#f5f5f1" }}>New Releases</h4>
+        <SliderGallery search="avatar" titoloSezione="Avatar" />
+
         {/* <Grid search="natale a" /> */}
-        <SliderGallery search="natale a" />
+        <SliderGallery search="natale a" titoloSezione="Cinepanettone" />
       </div>
     );
   }
